@@ -1,0 +1,16 @@
+{% autoescape off %} 
+
+
+
+Welcome {{ name }}
+Please confirm your email by clicking on the following link.
+
+Confirmation Link: http://{{ domain }}{% url 'activate' uidb64=uid token=token %} 
+
+
+{% comment %} {{ site.title }} blog! {% for
+post in site.posts %} {{ post.date | date_to_string }} » {{ post.title }} {%
+endfor %} {% endcomment %} 
+
+
+{% endautoescape %}
